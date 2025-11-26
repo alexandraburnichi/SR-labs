@@ -17,3 +17,15 @@ indicand ca fac parte din aceeasi categorie sau gama de produse.
 
 ### Laborator 5
 Pentru acest laborator, am implementat algoritmul Item-Based Collaborative Filtering. Deoarece setul de date inițial nu conținea istoricul acțiunilor, am generat o serie de interacțiuni simulate (rating-uri de la 1 la 5) între utilizatorii și cărțile importate anterior. Pe baza acestor date, am construit matricea User-Item și am calculat matricea de similaritate dintre cărți folosind Cosinus Similarity. În final, am creat logica de recomandare care prezice scorul unui utilizator pentru o carte necitită, calculând o medie ponderată a rating-urilor date de acesta itemilor similari din istoric.
+
+Rezultate recomandari pentru userul SP01:
+
+1. Dune | Scor estimat: 5.0
+2. Where the Crawdads Sing | Scor estimat: 5.0
+3. Becoming | Scor estimat: 5.0
+4. Ronia, the Robber's Daughter | Scor estimat: 5.0
+5. The Cat in the Hat | Scor estimat: 5.0
+
+Observatie:
+Scorurile sunt estimate pe baza mediei ponderate a rating-urilor date de user cartilor similare. 
+Deoarece datele sunt generate aleatoriu, este posibil ca unele carti sa aiba similaritate doar cu cartile de 5 stele ale userului, rezultand o predictie perfecta de 5.0.
