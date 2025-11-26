@@ -5,3 +5,15 @@ Dataset-ul ales a fost preluat de pe Kaggle si contine informatii despre cele ma
 
 ### Laborator 2
 Pentru acest laborator am extras utilizatorii din fisierul people.csv (continand numele, id-ul, echipa si locatia fiecarui utilizator). Am preluat aceste proprietati si am creat o functie ajutatoare care genereaza o adresa de mail in functie de numele (si compania, daca este cazul) fiecarei persoane. Am folosit apoi aceasta functie pentru a adauga adresa de mail ca o proprietate suplimentara a utilizatorilor. Toate datele au fost apoi trimise in Recombee.
+
+### Laborator 4
+Cele mai similare produse identificate:
+1. Unibond Sealant Re-New
+2. Unibond Sealant Re-New
+Scor Cosine Similarity: 1.0000
+
+Cele doua produse au un scor mare deoarece descrierile lor impartasesc multi termeni specifici (cuvinte cheie), 
+indicand ca fac parte din aceeasi categorie sau gama de produse.
+
+### Laborator 5
+Pentru acest laborator, am implementat algoritmul Item-Based Collaborative Filtering. Deoarece setul de date inițial nu conținea istoricul acțiunilor, am generat o serie de interacțiuni simulate (rating-uri de la 1 la 5) între utilizatorii și cărțile importate anterior. Pe baza acestor date, am construit matricea User-Item și am calculat matricea de similaritate dintre cărți folosind Cosinus Similarity. În final, am creat logica de recomandare care prezice scorul unui utilizator pentru o carte necitită, calculând o medie ponderată a rating-urilor date de acesta itemilor similari din istoric.
