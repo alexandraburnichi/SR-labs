@@ -8,24 +8,33 @@ Pentru acest laborator am extras utilizatorii din fisierul people.csv (continand
 
 ### Laborator 4
 Cele mai similare produse identificate:
-1. Unibond Sealant Re-New
-2. Unibond Sealant Re-New
-Scor Cosine Similarity: 1.0000
+scor similaritate maxim: 0.9872
+Prod 1: Tesco Pink Balloons 15Pk
+Prod 2: Tesco Blue Balloons 15Pk
+Descriere 1: - Assorted colours - 15 Pack - Material: Latex Add some colour to your celebration with these Pink balloons. Information Warnings Warning! Made of natural rubber latex. Choking hazard - children under...
+Descriere 2: - Assorted colours - 15 Pack - Material: Latex Add some colour to your celebration with these Blue balloons. Information Warnings Warning! Made of natural rubber latex. Choking hazard - children under...
 
 Cele doua produse au un scor mare deoarece descrierile lor impartasesc multi termeni specifici (cuvinte cheie), 
 indicand ca fac parte din aceeasi categorie sau gama de produse.
 
 ### Laborator 5
-Pentru acest laborator, am implementat algoritmul Item-Based Collaborative Filtering. Deoarece setul de date inițial nu conținea istoricul acțiunilor, am generat o serie de interacțiuni simulate (rating-uri de la 1 la 5) între utilizatorii și cărțile importate anterior. Pe baza acestor date, am construit matricea User-Item și am calculat matricea de similaritate dintre cărți folosind Cosinus Similarity. În final, am creat logica de recomandare care prezice scorul unui utilizator pentru o carte necitită, calculând o medie ponderată a rating-urilor date de acesta itemilor similari din istoric.
+Matricea User-Item:
+                     A Tale of Two Cities  The Little Prince  Harry Potter 1  And Then There Were None  Dream of Red Chamber
+Barr Faughny                            5                  0               4                         0                     0
+Dennison Crosswaite                     0                  5               0                         3                     0
+Gunar Cockshoot                         2                  0               0                         5                     1
+Wilone O'Kielt                          0                  4               5                         0                     0
+Gigi Bohling                            0                  0               3                         4                     5
 
-Rezultate recomandari pentru userul SP01:
+Matricea de Similaritate intre Carti:
+                          A Tale of Two Cities  The Little Prince  Harry Potter 1  And Then There Were None  Dream of Red Chamber
+A Tale of Two Cities                      1.00               0.00            0.53                      0.26                  0.07
+The Little Prince                         0.00               1.00            0.44                      0.33                  0.00
+Harry Potter 1                            0.53               0.44            1.00                      0.24                  0.42
+And Then There Were None                  0.26               0.33            0.24                      1.00                  0.69
+Dream of Red Chamber                      0.07               0.00            0.42                      0.69                  1.00
 
-1. Dune | Scor estimat: 5.0
-2. Where the Crawdads Sing | Scor estimat: 5.0
-3. Becoming | Scor estimat: 5.0
-4. Ronia, the Robber's Daughter | Scor estimat: 5.0
-5. The Cat in the Hat | Scor estimat: 5.0
-
-Observatie:
-Scorurile sunt estimate pe baza mediei ponderate a rating-urilor date de user cartilor similare. 
-Deoarece datele sunt generate aleatoriu, este posibil ca unele carti sa aiba similaritate doar cu cartile de 5 stele ale userului, rezultand o predictie perfecta de 5.0.
+Recomandari pentru Barr Faughny:
+- And Then There Were None (Scor: 2.27)
+- Dream of Red Chamber (Scor: 2.03)
+- The Little Prince (Scor: 1.77)
